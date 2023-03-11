@@ -1,0 +1,28 @@
+#barChart {
+
+    /* width: 100%; */
+    /* aspect-ratio: 16/8; */
+}
+
+#barWrapper {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+}
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+
+#backgroundImage{
+    z-index: -100;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-image: url("https://images.wallpaperscraft.com/image/single/day_of_pi_mathematics_number_pi_107930_1920x1080.jpg");
+    filter: blur(4px);
+}
