@@ -42,12 +42,12 @@ graphView = true;
 function SwitchView() {
     graphView = !graphView
     if (graphView) {
-        chart.style.width = "initial"
-        piMosaic.style.width = "0"
+        chart.style.opacity = 100;
+        piMosaic.style.opacity = 0;
         buttonText.innerText = "Mosaic"
     } else {
-        chart.style.width = "0"
-        piMosaic.style.width = "initial"
+        chart.style.opacity = 0;
+        piMosaic.style.opacity = 100;
         buttonText.innerText = "Graph"
 
     }

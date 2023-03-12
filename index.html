@@ -7,6 +7,7 @@
     <title>The First 100 Digits of PI</title>
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="https://vectorjs.org/library.css" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
   </head>
   <body>
     <!-- <div id="backgroundImage"></div> -->
@@ -18,12 +19,15 @@
       The mean is <span id="meanLabel" style="color: hsl(170, 40%, 60%)"></span>
     </h2>
     <div id="contentWrapper">
+
       <canvas id="barChart"></canvas>
       <img id="piMosaic" src="images/PIMosaic.png" alt="PI Mosaic" />
+
+
       <button id="switchView" onclick="SwitchView()">Switch to <span id="buttonText">Mosaic</span></button>
-    </div>
-    <div id="footer" style="width: 100%; bottom: 0; position: fixed">
-      <h3>2023 Joshua Brown</h3>
+      <div id="footer" style="width: 100%; bottom: 0; position: fixed">
+        <h3>2023 Joshua Brown</h3>
+      </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="scripts/main.js"></script>

@@ -4,6 +4,8 @@
     display: flex;
     justify-content: center;
     position: fixed;
+    margin: 0;
+    left:0;
 }
 
 body, h3, span, button {
@@ -31,7 +33,11 @@ body, h3, span, button {
 }
 
 #piMosaic {
-    width: 0;
+    opacity: 0;
+    width: 45vmax;
+    height: auto;
+    position: absolute;
+    margin: 0;
 }
 
 #switchView {
