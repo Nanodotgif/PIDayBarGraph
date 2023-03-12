@@ -27,7 +27,7 @@ body, h3, span, button {
 
 #switchView {
     position: fixed;
-    bottom: 90px;
+    bottom: 6vmax;
     height: 50px;
     width: 200px;
 }
