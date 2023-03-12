@@ -5,58 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The First 100 Digits of PI</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="https://vectorjs.org/library.css" />
   </head>
   <body>
     <!-- <div id="backgroundImage"></div> -->
-    <h1>The first 100 decimals of PI are: <span style="color:hsl(170, 40%, 60%);">1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679</span></h1>
-    <h2>The mean is <span id="meanLabel" style="color:hsl(170, 40%, 60%);"></span></h2>
-    <div id="barWrapper">
-      <canvas id="barChart">
-
-      </canvas>
+    <h1>
+      The first 100 decimals of PI are:
+      <span style="color: hsl(170, 40%, 60%)">1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679</span>
+    </h1>
+    <h2>
+      The mean is <span id="meanLabel" style="color: hsl(170, 40%, 60%)"></span>
+    </h2>
+    <div id="contentWrapper">
+      <canvas id="barChart"></canvas>
+      <img id="piMosaic" src="images/PIMosaic.png" alt="PI Mosaic" />
+      <button id="switchView" onclick="SwitchView()">Switch to <span id="buttonText">Mosaic</span></button>
     </div>
-    <div id="footer" style="width: 100%; bottom: 0; position: fixed;">
+    <div id="footer" style="width: 100%; bottom: 0; position: fixed">
       <h3>2023 Joshua Brown</h3>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-      firstHundredDecimalsPi = "1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679";
-      piAsArray = Array.from(firstHundredDecimalsPi).map(Number);
-    console.log(piAsArray);
-
-      frequenciesOfDigits = [0,0,0,0,0,0,0,0,0,0];
-      sumOfDigits = 0;
-      for (let i = 0; i < piAsArray.length; i++) {
-        sumOfDigits += piAsArray[i];
-        for (let j = 0; j < 10; j++) {
-          if (piAsArray[i] === j) { frequenciesOfDigits[j]++; }
-        }
-      }
-      mean = sumOfDigits / 100;
-
-      console.log(frequenciesOfDigits);
-      console.log(sumOfDigits);
-
-
-      xAxis = [0,1,2,3,4,5,6,7,8,9]
-      const meanDisplay = document.getElementById("meanLabel");
-      meanDisplay.innerText = mean;
-      
-      const chart = document.getElementById("barChart");
-      new Chart(chart, {
-        type: "bar",
-        data: {
-          labels: xAxis,
-          datasets: [{
-              label: '# of occurrences',
-              data: frequenciesOfDigits,
-              borderWidth: 1,
-              backgroundColor: "hsl(170, 40%, 60%)"
-            }]
-        }
-      })
-    </script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>

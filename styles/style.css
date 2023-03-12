@@ -1,4 +1,4 @@
-#barWrapper {
+#contentWrapper {
     height: 600px;
     width: 100%;
     display: flex;
@@ -6,17 +6,38 @@
     position: fixed;
 }
 
-body, h3 {
+body, h3, span, button {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
 
 
 #backgroundImage{
+    top:0;
+    left:0;
     z-index: -100;
     position: fixed;
     height: 100%;
     width: 100%;
-    background-image: url("https://images.wallpaperscraft.com/image/single/day_of_pi_mathematics_number_pi_107930_1920x1080.jpg");
-    filter: blur(4px);
+    background-image: url("/images/PIMosaic.png");
+    filter: blur(20px);
 }
+
+#switchView {
+    position: fixed;
+    bottom: 90px;
+    height: 50px;
+    width: 200px;
+}
+
+#piMosaic {
+    width: 0;
+}
+
+#switchView {
+    border-width: 2px;
+    border-color: lightgrey;
+    border-style: solid;
+}
+
+html {word-wrap: break-word;}
